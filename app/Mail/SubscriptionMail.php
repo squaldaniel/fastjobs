@@ -28,6 +28,6 @@ class SubscriptionMail extends Mailable
      */
     public function build()
     {
-        return $this->view("bootstrap.mails.teste_template")->subject("Subscription Link");
+        return $this->view("bootstrap.mails.teste_template")->subject("Link de Inscrição");
     }
 }
