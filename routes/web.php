@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Mail\SubscriptionMail;
 app()->setlocale("ptbr");
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,11 @@ Route::get("error", function(){
             return view("bootstrap.erros_cadlogin")->with($errorData);
     }
 });
+Route::get("mailteste", function(){
+    // app('translator')->get("site.subscription");
+    Mail::to("daniel.santos.ap@gmail.com")->send(new SubscriptionMail());
+    return view("bootstrap.mails.teste_template");
+});
 Route::post("add/actInputRegistro", [App\Http\Controllers\AddController::class, 'actInputRegistro']);
+
 
