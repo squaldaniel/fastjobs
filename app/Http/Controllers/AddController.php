@@ -34,7 +34,8 @@ class AddController extends Controller
                 return redirect()->to("error");
             } else {
                 $person = \App\Models\PersonModel::create($arrColumns);
-                return $person->id;
+                
+                return print_r($person);
             }
 
         }

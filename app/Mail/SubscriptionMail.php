@@ -16,9 +16,10 @@ class SubscriptionMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($intUserId)
     {
-        //
+        
+        //return 
     }
 
     /**

@@ -31,8 +31,9 @@ Route::get("error", function(){
 Route::get("mailteste", function(){
     // app('translator')->get("site.subscription");
     //Mail::to("daniel.santos.ap@gmail.com")->send(new SubscriptionMail());
-    return view("bootstrap.mails.teste_template");
+    return view("bootstrap.mails.registromail");
 });
+Route::get("ativacao", [App\Http\Controllers\SelectController::class, "activeUser"]);
 Route::post("add/actInputRegistro", [App\Http\Controllers\AddController::class, 'actInputRegistro']);
 
 
